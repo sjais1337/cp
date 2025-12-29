@@ -24,6 +24,29 @@ int main() {
     cin.tie(nullptr);
 
     
-    
+    int n;
+    cin >> n;
+    vi pi(n+1);
+    vi ps(n+1,0);
+    for(int i = 1; i <= n;i++){
+        cin >> pi[i];
+        ps[i] = ps[i-1] + pi[i];
+    }
+
+    int count = 0;
+    for(int i = 1; i<=n; i++){
+        for(int j = i; j <= n; j++){
+            float avg = ((float) (ps[j]-ps[i-1]))/((float)(j-i+1));
+
+            for(int z = i; z <= j; z++){
+                if((float)pi[z] == avg){
+                    count++;
+                    break;
+                }
+            }                
+        }
+    }
+
+    cout << count;
 }
 
