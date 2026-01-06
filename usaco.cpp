@@ -7,6 +7,8 @@ using namespace std;
 #define debug(x) cout << #x << ": " << (x) << "\n"
 #define all(vec) (vec).begin(), (vec).end()
 #define rAll(vec) (vec).rbegin(), (vec).rend()
+#define rep(a, b, c) for (int a = b; a < c; a++)
+#define rrep(a, b, c) for (int a = b; a >= c; a--)
 
 using vi = vector<int>;
 using vll = vector<ll>;

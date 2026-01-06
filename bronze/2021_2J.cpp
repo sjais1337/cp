@@ -24,6 +24,30 @@ constexpr int MOD = 1e9 + 7;
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
-    
+
+    int even = 0;
+    int odd = 0;
+    int n; 
+    cin >> n;
+    rep(i,0,n){
+        int temp; cin >> temp;
+        if(temp%2==0){
+            even++;
+        }else{
+            odd++;
+        }
+    }
+
+    while(odd > even){
+        odd -= 2;
+        even++;
+    }
+    int maxg;
+    if(even > odd + 1){
+        maxg=2*odd + 1;
+    }else{
+        maxg=even+odd;
+    }
+    cout << maxg<< endl;
 }
 
