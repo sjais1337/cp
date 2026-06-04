@@ -20,6 +20,7 @@ template <typename T> using Matrix = vec<vec<T>>;
 
 constexpr int MOD = 1e9 + 7;
 
+void solve()
 
 int main() {
     freopen("factory.in", "r", stdin);
@@ -27,4 +28,20 @@ int main() {
 
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
+
+    int n;
+    cin >> n;
+    vec<vi> graph(n);
+    vec<vi> rgraph(n);
+    rep(i,0,n){
+        int a,b;
+        cin >> a >> b;
+        graph[a-1].push_back(b-1);
+        rgraph[b-1].push_back(a-1);
+    }
+
+    rep(i,0,n){
+        
+    }
+    return 0;
 }
